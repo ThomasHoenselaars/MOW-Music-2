@@ -16,7 +16,10 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: Nunito;
+  /* font-family: Nunito; */
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #666;
   
 }
 
@@ -28,7 +31,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #666;
 
 }
 
@@ -55,10 +58,11 @@ h1 {
     right: 0;
     left: 0;
     width: 100%;
-    font-size: 200%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
-
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    border-bottom: 3px solid #ccc;
+    z-index: 9999;
 }
 
 .nav ul {
@@ -71,7 +75,7 @@ h1 {
 
 .nav li {
   padding: .5rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   width: 10rem;
   margin: .5rem 1rem;
   transition: all .2s ease-in-out;
@@ -83,7 +87,7 @@ h1 {
   
   .parallax {
     /* The image used */
-    background-image: url('https://images.unsplash.com/32/6Icr9fARMmTjTHqTzK8z_DSC_0123.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3304&q=80');
+    background-image: url('images/Studio\ MOW-0386.jpg');
   
     /* Full height */
     height: 100vh; 
@@ -109,8 +113,15 @@ h1 {
     padding: 2rem;
     width: 100%;
     min-height: 70vh;
+    border-bottom: 3px solid #ccc;
+    border-top: 3px solid #ccc;
+
+
   }
 
+  .main-div h1 {
+    color: #292929;
+  }
   .footer {
     height: 100vh;
     background: #222;
@@ -119,3 +130,36 @@ h1 {
   .contact {
     padding: 6rem 2rem 2rem 2rem;
   }
+
+  .contact p {
+    color: #fff;
+  }
+
+  .arrow {
+  position: relative;
+  bottom: -10rem;
+  left: 0%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+
+  /**
+   * Dark Arrow Down
+   */
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
